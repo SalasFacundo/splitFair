@@ -1,0 +1,44 @@
+#title{
+  color: #FEF985;
+  font-size: 25px;
+  font-family: 'Inter', sans-serif;
+  margin: 50px 0 50px 25px;
+  font-weight: bold;
+
+}
+
+.example-action-buttons {
+  padding-bottom: 20px;
+  color: red;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #262626;
+}
+
+.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}
+
+mat-accordion{
+  color: white !important;
+
+  mat-panel-title, mat-panel-description{
+    color: white;
+  }
+  mat-expansion-panel-header, ::ng-deep .mat-expansion-panel-body{
+    background-color: #262626 !important;
+  }
+
+
+}
+
+::ng-deep .mat-focused .mat-form-field-label, ::ng-deep .mat-form-field-label, ::ng-deep input.mat-input-element {
+  color: white !important;
+ }
+
+ ::ng-deep.mat-form-field-underline, ::ng-deep.mat-form-field-ripple  {
+  background-color: #FEF985 !important;
+}
