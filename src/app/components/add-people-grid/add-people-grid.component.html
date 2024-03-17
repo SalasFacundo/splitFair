@@ -1,22 +1,25 @@
 <div class="card">
  <div class="row">
-  <div class="subtitle col-6">Nombre </div>
-  <div class="subtitle col-6">Monto</div>
+  <div class="subtitle col-5">Nombre </div>
+  <div class="subtitle col-5">Monto</div>
  </div>
-  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="text-center" >
     <div formArrayName="personas">
-      <div class="row" *ngFor="let persona of personasFormArray.controls; let i=index" [formGroupName]="i">
-        <div class="col-6">
+      <div class="row d-flex, align-items-center" *ngFor="let persona of personasFormArray.controls; let i=index" [formGroupName]="i">
+        <div class="col-5">
           <input type="text" id="nombre{{i}}" formControlName="nombre">
         </div>
-        <div class="col-6">
-          <input type="email" id="email{{i}}" formControlName="email">
+        <div class="col-5">
+         <input type="email" id="email{{i}}" formControlName="email">
         </div>
-        <button type="button" (click)="eliminarPersona(i)" *ngIf="personasFormArray.length > 1"><mat-icon>delete</mat-icon></button>
+        <div class="subtitle col-1" (click)="eliminarPersona(i)"><div class="card-text col-6 "><mat-icon>delete</mat-icon></div></div>
       </div>
     </div>
-    <button type="button" (click)="agregarPersona()">Agregar otra persona</button>
-    <button type="submit" (click)="onSubmit()">Enviar</button>
+    <button type="submit" (click)="onSubmit()" id="submit">Generar cuentas</button>
   </form>
 
 </div>
+
+<button id="new-group">
+  <div class="card-text col-6 text-end" id="card-more" (click)="agregarPersona()"><mat-icon>add</mat-icon></div>
+</button>
