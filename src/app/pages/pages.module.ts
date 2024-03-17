@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatDividerModule} from '@angular/material/divider';
-import { OldGroupsComponent } from './old-groups/old-groups.component';
 import { ComponentsModule } from '../components/components.module';
 import {MatIconModule} from '@angular/material/icon';
 import { NewGroupComponent } from './new-group/new-group.component';
@@ -14,7 +13,6 @@ import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
-    OldGroupsComponent,
     NewGroupComponent
 ],
   imports: [
@@ -29,7 +27,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatButtonModule
   ],
   exports: [
-    OldGroupsComponent
+    NewGroupComponent
   ]
 })
 export class PagesModule { }

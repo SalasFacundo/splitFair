@@ -1,0 +1,22 @@
+<div class="card">
+ <div class="row">
+  <div class="subtitle col-6">Nombre </div>
+  <div class="subtitle col-6">Monto</div>
+ </div>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div formArrayName="personas">
+      <div class="row" *ngFor="let persona of personasFormArray.controls; let i=index" [formGroupName]="i">
+        <div class="col-6">
+          <input type="text" id="nombre{{i}}" formControlName="nombre">
+        </div>
+        <div class="col-6">
+          <input type="email" id="email{{i}}" formControlName="email">
+        </div>
+        <button type="button" (click)="eliminarPersona(i)" *ngIf="personasFormArray.length > 1"><mat-icon>delete</mat-icon></button>
+      </div>
+    </div>
+    <button type="button" (click)="agregarPersona()">Agregar otra persona</button>
+    <button type="submit" (click)="onSubmit()">Enviar</button>
+  </form>
+
+</div>

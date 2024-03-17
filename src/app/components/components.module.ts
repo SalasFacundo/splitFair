@@ -2,19 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 import { CardOldGroupComponent } from './card-old-group/card-old-group.component';
+import { AddPeopleGridComponent } from './add-people-grid/add-people-grid.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    CardOldGroupComponent
+    CardOldGroupComponent,
+    AddPeopleGridComponent
   ],
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
   ],
   exports : [
-    CardOldGroupComponent
+    CardOldGroupComponent,
+    AddPeopleGridComponent
   ]
 })
 export class ComponentsModule { }

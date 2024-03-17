@@ -9,7 +9,6 @@ import {MatTableModule} from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { OldGroupsComponent } from './pages/old-groups/old-groups.component';
 import { CardOldGroupComponent } from './components/card-old-group/card-old-group.component';
 import { ComponentsModule } from './components/components.module';
 import { PagesModule } from './pages/pages.module';

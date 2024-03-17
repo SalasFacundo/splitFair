@@ -1,0 +1,53 @@
+#title{
+  color: #FEF985;
+  font-size: 25px;
+  font-family: 'Inter', sans-serif;
+  margin: 50px 0 50px 25px;
+  font-weight: bold;
+
+}
+
+
+.subtitle{
+  color: #FEF985;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+
+}
+
+.card{
+  background-color: #262626;
+  color: white;
+  width: 100%;
+  border-radius: 10px 10px 10px 10px;
+
+  #card-name{
+    font-size: 25px;
+  }
+
+  mat-icon{
+    color: #FEF985;;
+  }
+}
+
+form{
+  input{
+    border-radius: 10px 10px 10px 10px;
+    outline: none;
+    width: 100%;
+    border-style: none;
+  }
+
+  .form-row{
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .form-column{
+    justify-content: center;
+    margin: auto;
+  }
+}
