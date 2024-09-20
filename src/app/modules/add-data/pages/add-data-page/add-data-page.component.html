@@ -1,0 +1,10 @@
+<div class="container">
+  <div id="title-container"><span id="app-title">FAIR SPLIT</span></div>
+  <div id="subtitle-container"><span id="app-subtitle">Divide gastos</span></div>
+  <div id="add-people-grid">
+    <add-people-grid></add-people-grid>
+  </div>
+  <div *ngIf="showResults" id="add-people-grid">
+    <results-grid></results-grid>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngFor="let transaction of transactions">
+    <div class="row">
+      <div class="col-3"><span>{{transaction.debtor}}</span></div>
+    <div class="col-1"><span><mat-icon><span class="material-symbols-outlined">
+      arrow_forward
+      </span></mat-icon></span></div>
+    <div class="col-3"><span>{{transaction.creditor}}</span></div>
+    <div class="col-3"><span>$ {{transaction.amount | number:'1.2-2' }}</span></div>
+    <div class="col-2"><span><input type="checkbox" name="" id=""></span></div>
+    <mat-divider style="width: 80%;"></mat-divider>
+    </div>
+  </div>
+</div>

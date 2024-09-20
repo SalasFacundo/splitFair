@@ -28,7 +28,7 @@
   }
 
   mat-icon{
-    color: #FEF985;;
+    cursor: pointer;
   }
 }
 
@@ -56,10 +56,7 @@ form{
   }
 }
 
-#new-group{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+#add-person{
   background-color: #FEF985;
   border: none;
   border-radius: 10px 10px 10px 10px;
@@ -67,25 +64,68 @@ form{
   width: 50px;
   height: 50px;
   color: black;
+  min-width: 50px;
 
   mat-icon{
     font-size: 40px;
   }
 }
 
-#submit{
-  position: fixed;
-  position: fixed; left: 50%; transform: translateX(-50%); bottom: 20px;
-  background-color: #FEF985;
-  border: none;
-  border-radius: 10px 10px 10px 10px;
-  align-items: center;
-  width: auto;
-  height: 50px;
-  color: black;
-
-  mat-icon{
-    font-size: 40px;
-  }
+.col-1{
+  display: flex;
+  justify-content: center;
 }
 
+
+
+
+
+.container{
+  width: 100%;
+  z-index: 1;
+}
+
+#actions{
+  display: flex;
+  justify-content: center;
+  position: fixed; left: 50%; transform: translateX(-50%); bottom: 0px;
+  max-width: 700px;
+  width: 100%;
+  z-index: 1000;
+  background-color: #171717;
+  padding: 50px 0 20px 0;
+  min-width: 342px;
+
+  .row{
+    width: 100%;
+  }
+
+  .col-10{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  .col-2{
+    display: flex;
+    justify-content: end;
+  }
+
+  #generar-cuentas, #reset{
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    align-items: center;
+    height: 50px;
+    color: black;
+    width: 100%;
+
+    mat-icon{
+      font-size: 40px;
+    }
+  }
+
+
+
+  .submit_enabled{
+    background-color: #FEF985;
+  }
+}

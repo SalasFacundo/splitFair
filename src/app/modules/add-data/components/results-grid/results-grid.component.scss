@@ -1,0 +1,40 @@
+.container{
+  background-color: #262626;
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 60px;
+  border-radius: 10px;
+
+  .col-2, .col-3{
+    display: flex;
+    align-items: center;
+  }
+
+  span{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  mat-icon{
+    color: #FEF985;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform-origin: 0 0;
+  }
+
+  .mat-divider {
+    border-top-color: #FEF985;
+    margin: 30px 60px;
+}
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="card">
+    <div class="row justify-content-center w-100">
+      <div class="subtitle col-5">Nombre </div>
+      <div class="subtitle col-5">Monto</div>
+    </div>
+    <form [formGroup]="formulario" class="text-center">
+      <div formArrayName="personas">
+        <div class="row d-flex, align-items-center justify-content-center"
+          *ngFor="let persona of personasFormArray.controls; let i=index" [formGroupName]="i">
+          <div class="col-5">
+            <input type="text" id="name{{i}}" formControlName="name">
+          </div>
+          <div class="col-5">
+            <input type="email" id="amount{{i}}" formControlName="amount">
+          </div>
+          <div class="subtitle col-1" (click)=" i>1 && eliminarPersona(i)">
+            <div [ngStyle]="{'color': i < 2 ? 'grey' : '#FEF985'}" class="card-text "><mat-icon>delete</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <div id="actions">
+    <div class="row">
+      <div class="col-10">
+        <button *ngIf="showResetButton == false"
+                [ngClass]="{'submit_enabled': personasFormArray.valid}"
+                id="generar-cuentas"
+                [disabled]="!personasFormArray.valid"
+                (click)="generarCuentas(personasFormArray.value)">
+          GENERAR CUENTAS
+        </button>
+
+        <button *ngIf="showResetButton == true"
+                id="reset"
+                (click)="resetForm()">
+          Reiniciar
+        </button>
+      </div>
+      <div class="col-2">
+        <button id="add-person">
+          <div class="card-text col-6 text-end" id="card-more" (click)="agregarPersona()"><mat-icon>add</mat-icon></div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
